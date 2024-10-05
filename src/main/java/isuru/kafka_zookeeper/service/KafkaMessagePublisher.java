@@ -15,7 +15,11 @@ public class KafkaMessagePublisher {
     private KafkaTemplate<String, Object> template;
 
     public void sendMessageToTopic(String message) {
-        CompletableFuture<SendResult<String, Object>> future = template.send("topic-1", message);
+
+        // when setting a topic, kafka uses default settings to do that.
+        // therefor it creates a topic with 1 partition, which may reduce performance when communicating with multiple consumers
+        // we can create custom topics also, which we have created in config/KafkaProducerConfig
+        CompletableFuture<SendResult<String, Object>> future = template.send("topic-3", message);
 
         // handle result asynchronously
         future.whenComplete((result, ex) -> {
