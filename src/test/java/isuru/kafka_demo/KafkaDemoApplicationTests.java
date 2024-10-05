@@ -1,10 +1,10 @@
-package isuru.kafka_zookeeper;
+package isuru.kafka_demo;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class KafkaZookeeperApplicationTests {
+class KafkaDemoApplicationTests {
 
 	@Test
 	void contextLoads() {

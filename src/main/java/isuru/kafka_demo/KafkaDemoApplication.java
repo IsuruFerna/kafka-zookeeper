@@ -1,13 +1,13 @@
-package isuru.kafka_zookeeper;
+package isuru.kafka_demo;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class KafkaZookeeperApplication {
+public class KafkaDemoApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(KafkaZookeeperApplication.class, args);
+		SpringApplication.run(KafkaDemoApplication.class, args);
 	}
 
 }
